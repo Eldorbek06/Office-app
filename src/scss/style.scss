@@ -4,6 +4,10 @@
     font-family: 'Roboto';
 }
 
+body{
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1040px;
     padding: 0 20px;
@@ -109,11 +113,6 @@
 
         &_prizer {
             color: #e09f3e;
-
-            #star {
-                translate: 0% !important;
-                opacity: 1 !important;
-            }
         }
 
         &:not(:last-child) {
@@ -166,11 +165,6 @@
         user-select: none;
         transition: .2s;
 
-        #star {
-            translate: 100%;
-            opacity: 0;
-        }
-
         &:not(:last-child) {
             cursor: pointer;
             background-color: #c4c4c4;
@@ -179,6 +173,23 @@
                 background-color: #9f9f9f;
             }
         }
+
+
+    }
+    
+    &__icon-star {
+        width: 35px;
+        padding: 5px;
+        border-radius: 5px;
+        user-select: none;
+        transition: .2s;
+        translate: 100%;
+        opacity: 0;
+
+        &_active{
+           translate: 0% !important;
+           opacity: 1 !important;
+       }
     }
 }
 
