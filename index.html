@@ -12,8 +12,34 @@
 
 <body>
 
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__text">
+					<h1 class="header__title">Учет сотрудников в компании Wepro</h1>
+					<h2 class="header__employees-total">
+						Общее число сотрудников:
+						<span class="header__employees-total-count" id="total-employees">0</span>
+					</h2>
+					<h2 class="header__prizers">
+						Премию получат:
+						<span class="header__prizers-count" id="total-prizers">0</span>
+					</h2>
+				</div>
+				<div class="header__actions">
+					<input class="header__inp" type="text">
+					<div class="header__btns">
+						<button class="header__btn" id="all-employees">Все сотрудники</button>
+						<button class="header__btn" id="for-promotion">На повышение</button>
+						<button class="header__btn" id="over">З/П больше <span id="over-count">1000</span>$</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<main class="main"></main>
+	<footer class="footer"></footer>
 
-	
 	<script type="module" src="/src/modules/main.ts"></script>
 </body>
 
