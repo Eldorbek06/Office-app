@@ -15,7 +15,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="header__inner">
-				<div class="header__text">
+				<div class="header__text shadow">
 					<h1 class="header__title">Учет сотрудников в компании Wepro</h1>
 					<h2 class="header__employees-total">
 						Общее число сотрудников:
@@ -26,7 +26,7 @@
 						<span class="header__prizers-count" id="total-prizers">0</span>
 					</h2>
 				</div>
-				<div class="header__actions">
+				<div class="header__actions shadow">
 					<input class="header__inp" type="text" placeholder="Найти сотрудника">
 					<div class="header__btns">
 						<button class="header__btn header__btn_active" id="all-employees">Все сотрудники</button>
@@ -37,7 +37,21 @@
 			</div>
 		</div>
 	</header>
-	<main class="main"></main>
+	<main class="main">
+		<div class="container">
+			<div class="main__inner shadow">
+				<div class="main__item">
+					<p class="main__name" id="employee-name">Шахзод Хамидов</p>
+					<input class="main__inp" type="text">
+					<div class="main__actions">
+						<img class="main__icon" src="/public/icons/cookie.png" alt="icon">
+						<img class="main__icon" src="/public/icons/bin.png" alt="icon">
+						<img class="main__icon" src="/public/icons/star.png" alt="icon">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
 	<footer class="footer"></footer>
 
 	<script type="module" src="/src/modules/main.ts"></script>

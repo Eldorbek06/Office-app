@@ -26,7 +26,6 @@
         gap: 12px;
         align-items: start;
         font-weight: 500;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
     }
 
     &__title {
@@ -46,7 +45,6 @@
         padding: 30px 25px;
         border-radius: 5px;
         background-color: #3d5a80;
-        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
     }
 
     &__inp {
@@ -58,7 +56,7 @@
         font-size: 14px;
         cursor: pointer;
 
-        &::placeholder{
+        &::placeholder {
             font-size: 14px;
         }
     }
@@ -79,13 +77,32 @@
         transition: .2s;
 
         &:hover,
-        &_active{
+        &_active {
             background-color: white;
             color: black;
         }
 
-        &:not(:last-child){
+        &:not(:last-child) {
             border-right: 1px solid white;
         }
     }
+}
+
+.main {
+
+    &__inner {}
+
+    &__item {}
+
+    &__name {}
+
+    &__inp {}
+
+    &__actions {}
+
+    &__icon {}
+}
+
+.shadow{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
 }
