@@ -98,6 +98,8 @@
     &__item {
         padding: 15px 20px 15px 0;
         display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
         width: 100%;
@@ -174,6 +176,59 @@
             &:hover {
                 background-color: #9f9f9f;
             }
+        }
+    }
+}
+
+.footer {
+    padding-bottom: 50px;
+
+    &__inner {
+        color: white;
+        background-color: #3d5a80;
+        padding: 25px 30px;
+        border-radius: 5px;
+    }
+
+    &__title {
+        margin-bottom: 25px;
+        font-size: 28px;
+    }
+
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        height: 35px;
+        font-size: 15px;
+    }
+
+    &__inp {
+        padding: 10px;
+        border-radius: 5px;
+        outline: 0px solid #0d6efd;
+        width: 35%;
+        transition: .2s;
+        font-size: inherit;
+
+        &:hover,
+        &:focus {
+            outline: 3px solid #0066ff;
+        }
+    }
+
+    &__btn {
+        color: white;
+        background-color: transparent;
+        border: 1px solid white;
+        transition: .2s;
+        padding: 0 10px;
+        border-radius: 5px;
+        font-size: inherit;
+
+        &:hover {
+            background-color: white;
+            color: black;
         }
     }
 }
