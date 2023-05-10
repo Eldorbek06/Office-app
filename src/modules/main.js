@@ -7,6 +7,7 @@ let empsCont = document.querySelector('.main__inner')
 let header__btns = document.querySelectorAll('.header__btn')
 let over_num = 1000
 let over = document.querySelector('#over-count')
+let searchInp = document.querySelector('.header__inp')
 
 over.innerHTML = over_num
 
@@ -32,4 +33,9 @@ getData("/data")
                 }
             }
         })
+
+        searchInp.onkeyup = () => {
+            let key = searchInp.value.trim().toLowerCase()
+            reload(data.filter(el => el.name.toLowerCase().includes(key)), empsCont)
+        }
     })
