@@ -174,7 +174,15 @@ body{
             }
         }
 
+        .main__icon-star{
+            translate: 100%;
+            opacity: 0;
+        }
 
+        &_active{
+            translate: 0% !important;
+            opacity: 1 !important;
+        }
     }
     
     &__icon-star {
