@@ -1,4 +1,3 @@
-import { couldStartTrivia } from "typescript"
 import { delData, getData, patchData } from "./http"
 import { headerBtnsActivate } from "./main"
 
