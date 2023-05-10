@@ -25,7 +25,7 @@ getData("/data")
                     reload(data, empsCont)
                 } else if (el.id == "for-promotion") {
                     el.classList.add('header__btn_active')
-                    reload(data.filter(el => el.increase), empsCont)
+                    reload(data.filter(el => el.rise), empsCont)
                 } else {
                     el.classList.add('header__btn_active')
                     reload(data.filter(el => el.salary >= over_num), empsCont)
