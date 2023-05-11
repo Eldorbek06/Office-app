@@ -10,7 +10,7 @@
     {
       "name": "Шахзод Хамидов",
       "salary": 3000,
-      "increase": false,
+      "increase": true,
       "rise": false,
       "id": 2
     },
