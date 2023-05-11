@@ -2,6 +2,7 @@ import { delData, getData, patchData } from "./http"
 import { headerBtnsActivate } from "./main"
 
 export function reload(arr, place) {
+    document.querySelector('#total-prizers').innerHTML = arr.length
     place.innerHTML = ''
     if (arr.length != 0) {
         for (let item of arr) {
@@ -44,6 +45,7 @@ export function reload(arr, place) {
             place.append(main__item)
 
             cookie.onclick = () => {
+                document.querySelector('#total-prizers').innerHTML = arr.length
                 patchData("/data", item.id, item.increase ? { increase: false } : { increase: true })
                     .then(() => {
                         getData("/data")
@@ -55,6 +57,7 @@ export function reload(arr, place) {
             }
 
             bin.onclick = () => {
+                document.querySelector('#total-prizers').innerHTML = arr.length
                 delData("/data", item.id)
                     .then(() => {
                         getData("/data")
@@ -66,15 +69,16 @@ export function reload(arr, place) {
             }
 
             name.onclick = () => {
+                document.querySelector('#total-prizers').innerHTML = arr.length
                 patchData("/data", item.id, item.rise ? { rise: false } : { rise: true })
                     .then(() => {
                         getData("/data")
                             .then(({ data }) => {
-                                if(document.querySelector('#all-employees').classList.contains('header__btn_active')){
+                                if (document.querySelector('#all-employees').classList.contains('header__btn_active')) {
                                     reload(data, document.querySelector('.main__inner'))
-                                } else if(document.querySelector('#for-promotion').classList.contains('header__btn_active')){
+                                } else if (document.querySelector('#for-promotion').classList.contains('header__btn_active')) {
                                     reload(data.filter(el => el.rise), document.querySelector('.main__inner'))
-                                } else{
+                                } else {
                                     reload(data.filter(el => el.increase), document.querySelector('.main__inner'))
                                 }
                                 headerBtnsActivate(document.querySelectorAll('.header__btn'), place, data)
